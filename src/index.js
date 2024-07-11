@@ -30,6 +30,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import CourtStaffCheckin from "./components/CourtStaff/ManageCourtCheckin";
 import CourtStaffLayout from "./layouts/CourtStaffLayout";
 import { GlobalStateProvider } from "./components/context/GlobalStateContext";
+import UserProfile from "./components/UserProfile";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -47,6 +48,8 @@ root.render(
             <Route path="/payment" element={<PaymentPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/court-details" element={<CourtDetails />} />
+            <Route path="/profile" element={<UserProfile />} />
+            {/* Thêm route cho UserProfile */}
           </Route>
           <Route path="/admin" element={<AdminLayout />}>
             <Route path="accounts" element={<AccountManagement />} />
